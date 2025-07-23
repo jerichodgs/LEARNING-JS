@@ -18,7 +18,6 @@ body {
     margin: 50px auto; /* Center the container */
     padding: 100px;
     background-color: #ffffff;
-    border: 5px solid #000000;
     border-radius: 20px; /* Optional: adds nice rounding */
     position: relative;
     
@@ -32,26 +31,28 @@ body {
 .container::after, .container::before{
     content: '';
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 98%;
+    width: 99%;
     background-image: conic-gradient(from var(--angle),
-    #4a90e2,  /* modern blue */
-  #50e3c2,  /* mint green */
-  #f8e71c,  /* golden yellow */
-  #f5a623,  /* soft orange */
-  #d0021b,  /* deep red */
-  #4a90e2   /* loop back */    );
+    #ff4d4d,   /* red (classic dice red) */
+  #ffa500,   /* orange */
+  #ffff66,   /* yellow */
+  #66ff66,   /* green */
+  #66b3ff,   /* light blue */
+  #cc99ff,   /* purple */
+  #ff4d4d
+  );
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     z-index: -1;
     padding: 10px;
     border-radius: 20px;
-    animation: 3s spin linear infinite;
+    animation: 5s spin linear infinite;
 
 }
 .container::before{
-    filter: blur(3rem);
+    filter: blur(2.5rem);
     opacity: 1;
 }
 @keyframes spin{
@@ -62,6 +63,7 @@ body {
         --angle: 360deg;
     }
 }
+
 
 h1 {
     margin-top: 10px;
