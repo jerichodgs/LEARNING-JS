@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel = "stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "container">
+    <h1 id =myH1>MODE OF PAYMENT</h1>
+    <div class = "orderContainer">
+        <p>Your cart:</p>
+        <input type = "checkbox" id = "iPhone" >Iphone 16 Pro Max</input>
+        <br>
+        <input type = "checkbox" id = "samSung" >Samsung Galaxy S25 Edge </input>
+    </div>
+    <div class = "buttonContainer">
+        <p>Choose your mode of payment.</p>
+        <input type = "radio" id = "codBtn" class = "modes" name = "payment" >Cash on Delivery</input> 
+        <br>
+        <input type = "radio" id = "gcashBtn" class = "modes" name = "payment">Gcash</input>
+        <br>
+        <input type = "radio" id = "paymayaBtn" class = "modes" name = "payment">PayMaya</input>
+        <br>
+        <input type = "radio" id = "obBtn" class = "modes" name = "payment">Online Banking</input>
+        <br>
+        <button type = "submit" id = "confirmBtn">Place Order</button>
+    </div>
+    <hr class = "bottom-line">
+    <p id="orderResult">  </p>
+    </div>  
+    <script src="interactives.js"></script>
+</body>
+</html>

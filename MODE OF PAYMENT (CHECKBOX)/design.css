@@ -1,0 +1,170 @@
+
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #181818;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+.orderContainer {
+    font-family: "Inter";
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-left: 120px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.orderContainer p{
+    font-family: "Inter";
+    font-size: 1em;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5); /* or any size you're using */
+  vertical-align: middle; /* aligns with text baseline */
+  position: relative;
+  top: -2px; /* adjust this to raise it slightly */
+  margin-right: 10px;
+}
+
+.container {
+    width: 60em;
+    height: 38em;
+    margin: 50px auto; /* Center the container */
+    padding: 100px;
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 20px; /* Optional: adds nice rounding */
+    position: relative;
+    
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container::after, .container::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),
+    #4a90e2,  /* modern blue */
+  #50e3c2,  /* mint green */
+  #f8e71c,  /* golden yellow */
+  #f5a623,  /* soft orange */
+  #d0021b,  /* deep red */
+  #4a90e2   /* loop back */    );
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 10px;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+
+}
+.container::before{
+    filter: blur(3rem);
+    opacity: 1;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.buttonContainer {
+    font-family: "Inter";
+    font-weight: 250;
+    font-size: 1.2em;
+    margin: auto;
+    padding: 30px;
+    width: 20rem;
+    background-color: #e7e7e7;
+    border: 1px dashed #000000;
+    box-shadow: 0 0px 10px rgb(0, 0, 0);
+    border-radius: 20px;
+    box-sizing: border-box;
+    align-self: center;
+    text-align: left;
+}
+
+#confirmBtn {
+    display: block;
+    margin: 20px auto 0 auto;
+    margin-left: auto;
+    margin-right: 0px;
+    justify-content: flex-end;
+    font-size: 17px;
+    font-family: "Inter";
+    font-weight: 300;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px ;
+    padding-right: 12px ;
+    background-color: #33d313;
+    border: 0.2px solid #000000;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#confirmBtn:hover {
+    background-color: #01af1e;
+}
+
+h1 {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 5em;
+    font-weight: 200;
+    color: #000000;
+}
+
+.bottom-line {
+  border: none;
+  height: 2px;
+  background-color: black;
+  width: 80%; /* or any specific width */
+  margin-top: 40px; /* spacing from content above */
+}
+
+#orderResult {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: block;
+    font-size: 1.5em;
+    font-weight: 250;
+    min-height: 2em;
+    margin-bottom: 40px; 
+}
+
+.buttons {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 3.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons:hover {
+    background-color: #000000;
+}
+

@@ -1,0 +1,122 @@
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #1a1919;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    height: 100vh;           /* full viewport height */
+}
+
+.container {
+    width: 60em;
+    height: 38em;
+    margin: 50px auto; /* Center the container */
+    padding: 100px;
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 20px; /* Optional: adds nice rounding */
+    position: relative;
+    
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container::after, .container::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),
+    #4a90e2,  /* modern blue */
+  #50e3c2,  /* mint green */
+  #f8e71c,  /* golden yellow */
+  #f5a623,  /* soft orange */
+  #d0021b,  /* deep red */
+  #4a90e2   /* loop back */    );
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 10px;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+
+}
+.container::before{
+    filter: blur(3rem);
+    opacity: 1;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.container2 {
+    width: 20em;
+    height: 10em;
+    margin: 50px auto; /* Center the container */
+    background-color: #e7e6e6;
+    border: 1px dashed #000000;
+    box-shadow: 0 1px 5px rgb(0, 0, 0); /* Fixed alpha */
+    border-radius: 20px; /* Optional: adds nice rounding */
+    align-content: center;
+    justify-content: center;
+}
+
+#ageClass {
+    font-size: 2em;
+    font-family: "Inter";
+    font-weight: 200;
+    width: 10em;
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: 200;
+    color: #000000;
+    margin-top: 5px;
+    margin-bottom: 0.3em;
+}
+
+#enterBtn {
+    display: inline-block;
+    font-size: 2em;
+    padding: 11.5px;
+    font-family: "Inter";
+    font-weight: 300;
+    background-color: rgb(0, 230, 50);
+    border: 1px solid #000000;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    justify-content: center;
+    text-align: center;
+    height: 2em;
+}
+
+#enterBtn:hover {
+    background-color: rgb(0, 156, 34);
+    color: #ffffff;
+}
+
+#ageInput {
+    font-size: 2em;
+    padding: 11.5px;
+    border: solid 0.5px black;
+    border-radius: 5px;
+    font-family: "Inter";
+    font-weight: 200;
+    width: 9em;
+}

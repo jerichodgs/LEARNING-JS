@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href="design.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div class = "container">
+            <h1 id =myH1>TEMPERATURE CONVERSION PROGRAM</h1>
+                <div class = "outputContainer">
+                        <input type = "text" id = "numberInput" placeholder="Enter here." class = "div1">
+                        <input type = "text" id = "numberOutput" class = "div2" value = "" readonly>
+
+                        <input type = "radio" id = "celsius" class = "div3" name = "unit">
+                            <label class = "div7">Fahrenheit ➡️ Celsius</label>
+
+                        <input type = "radio" id = "fahrenheit" class = "div4" name = "unit">
+                            <label class = "div8">Celsius ➡️ Fahrenheit</label>
+
+                        <button type = "submit" id = "submitBtn" class = "div5">CONVERT</button>
+                        <p id = "equalsSign" class = "div6">=</p>
+                </div>
+            <p id = "messageOutput">Enter a number and choose the unit of conversion.</p>
+        </div>
+    </body>
+    <script src = "interactives.js"></script>
+</html>

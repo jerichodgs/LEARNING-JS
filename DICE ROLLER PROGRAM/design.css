@@ -1,0 +1,141 @@
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #1a1919;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;      
+    gap: 200px;     
+}
+
+.container {
+    width: 60em;
+    height: 38em;
+    margin: 50px auto; /* Center the container */
+    padding: 100px;
+    background-color: #ffffff;
+    border-radius: 20px; /* Optional: adds nice rounding */
+    position: relative;
+    
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container::after, .container::before{
+    content: '';
+    position: absolute;
+    height: 98%;
+    width: 99%;
+    background-image: conic-gradient(from var(--angle),
+    #ff4d4d,   /* red (classic dice red) */
+  #ffa500,   /* orange */
+  #ffff66,   /* yellow */
+  #66ff66,   /* green */
+  #66b3ff,   /* light blue */
+  #cc99ff,   /* purple */
+  #ff4d4d
+  );
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 10px;
+    border-radius: 20px;
+    animation: 5s spin linear infinite;
+
+}
+.container::before{
+    filter: blur(2.5rem);
+    opacity: 1;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: 200;
+    color: #000000;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+#messageOutput {
+    font-family: "Inter";
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-top: 18px;
+    margin-bottom: 30px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+#numberOfDice {
+    text-align: center;
+    font-family: "Inter";
+    font-size: 3em;
+    width: 4rem;
+    height: 2.5rem;
+    font-weight: 200;
+    border-radius: 1px;
+    border: 2px solid black;
+    border-right: 1px solid black;
+    padding: 5px;
+    margin-top: 0;
+}
+
+#submitBtn {
+    width: 15%;
+    height: 1.532em;
+    margin-top: 0;
+
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 2.2em;
+
+    background-color: rgb(199, 0, 0);
+    border: 2px solid #000000;
+    border-left: 1px solid black;
+    border-radius: 0.1px solid black;
+    color: #ffffff;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submitBtn:hover {
+    background-color: #700000;
+    color: #ffffff;
+}
+
+#diceResult {
+    margin-top: 20px;
+
+    font-family: "Inter";
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+#diceImages img  {
+    margin: 20px;
+    gap: 20px;
+    max-width: 100px;
+    max-height: 100px;
+}

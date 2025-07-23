@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href="design.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div class = "container">
+            <h1 id =myH1>DICE ROLLER</h1>
+                <div class = "outputContainer">
+                    <p id = "messageOutput">Enter the number of dice then click the roll button.</p>
+                    <div class = "inputGroup">
+                        <input type = "number" id = "numberOfDice" value=1 min=1 max=10 >
+                        <button onclick="rollDice()" id = "submitBtn">ROLL</button>
+                    </div>
+                    <div id = "diceResult"></div>
+                    <div id = "diceImages"></div>
+                </div>
+        </div>
+    </body>
+    <script src = "interactives.js"></script>
+</html>

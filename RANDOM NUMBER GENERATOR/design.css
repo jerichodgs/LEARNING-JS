@@ -1,0 +1,110 @@
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #1a1919;
+    margin: 0;
+    padding: 0;
+
+    /* Make body a flex container */
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center;     /* vertical center */
+    height: 100vh;           /* full viewport height */
+}
+
+.container {
+    width: 60em;
+    height: 38em;
+    margin: 50px auto; /* Center the container */
+    padding: 100px;
+    background-color: #ffffff;
+    border: 5px solid #000000;
+    border-radius: 20px; /* Optional: adds nice rounding */
+    position: relative;
+    
+}
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.container::after, .container::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),
+    #4a90e2,  /* modern blue */
+  #50e3c2,  /* mint green */
+  #f8e71c,  /* golden yellow */
+  #f5a623,  /* soft orange */
+  #d0021b,  /* deep red */
+  #4a90e2   /* loop back */    );
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 10px;
+    border-radius: 20px;
+    animation: 3s spin linear infinite;
+
+}
+.container::before{
+    filter: blur(3rem);
+    opacity: 1;
+}
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+h1 {
+    font-size: 5em;
+    font-weight: 200;
+    color: #000000;
+    margin-top: 5px;
+    margin-bottom: 0.3em;
+}
+
+h2 {
+    color: #000000;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+#randomNum {
+    display: block;
+    font-size: 9em;
+    font-weight: 200;
+    margin: 60px auto;
+}
+
+p {
+    font-size: 1em;
+    color: #000000;
+}
+
+#generateBtn {
+    font-family: "Inter";
+    font-weight: 300;
+    display: inline-block;
+    font-size: 1.6em;
+    padding: 20px 15px;
+    background-color: rgb(39, 169, 255);
+    border: 2px solid #000000;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#generateBtn:hover {
+    background-color: #0059ff;
+    color: #ffffff;
+}
