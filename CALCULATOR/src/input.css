@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Digital7';
+    src: url('./calcfont.ttf') format('truetype');
+}
+
+button {
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    font-family: Inter;
+    font-weight: 230;
+    font-size: 2em;
+}

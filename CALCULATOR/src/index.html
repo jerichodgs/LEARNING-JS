@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang = "en" class = "h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+</head>
+  <body class = "flex justify-center h-full bg-[#02051b]">
+    <div class = "grid grid-cols-5 grid-rows-5 gap-3 self-center bg-[#3e3e44] h-120 w-100 border-20 border-solid border-[#3e3e44] rounded-2xl">
+        <div id = "displayBox" class = "h-[70px] grid row-span-1 col-span-5 bg-[#668d6a] inset-shadow-[#0e130e] inset-shadow-sm rounded-[6px]">
+          <div id = "displayOutput" class = "h-full px-3 flex items-center justify-start text-[4.5em] text-left font-[Digital7] overflow-hidden">
+            <input type = "text" placeholder="Calculator"></input>
+          </div>
+      </div class = "rounded-2xl">
+        <button id = "btn0" class = "grid row-start-5 row-end-6 col-span-2 bg-amber-50">0</button>
+        <button id = "btndot" class = "grid row-start-5 row-end-6 col-start-3 col-end-4 bg-amber-50">.</button>
+        <button id = "btn1" class = "grid row-start-4 row-end-5 col-start-1 col-end-2 bg-amber-50">1</button>
+        <button id = "btn2" class = "grid row-start-4 row-end-5 col-start-2 col-end-3 bg-amber-50">2</button>
+        <button id = "btn3" class = "grid row-start-4 row-end-5 col-start-3 col-end-4 bg-amber-50">3</button>
+        <button id = "btn4" class = "grid row-start-3 row-end-4 col-start-1 col-end-2 bg-amber-50">4</button>
+        <button id = "btn5" class = "grid row-start-3 row-end-4 col-start-2 col-end-3 bg-amber-50">5</button>
+        <button id = "btn6" class = "grid row-start-3 row-end-4 col-start-3 col-end-4 bg-amber-50">6</button>
+        <button id = "btn7" class = "grid row-start-2 row-end-3 col-start-1 col-end-2 bg-amber-50">7</button>
+        <button id = "btn8" class = "grid row-start-2 row-end-3 col-start-2 col-end-3 bg-amber-50">8</button>
+        <button id = "btn9" class = "grid row-start-2 row-end-3 col-start-3 col-end-4 bg-amber-50">9</button>
+        <button id = "btnclear" class = "grid row-start-2 row-end-3 col-start-4 col-end-6 col-span-2 bg-amber-50">CLEAR</button>
+        <button id = "btnmultiply" class = "grid row-start-3 row-end-4 col-start-4 col-end-5 bg-amber-50">x</button>
+        <button id = "btndivide" class = "grid row-start-3 row-end-4 col-start-5 col-end-6 bg-amber-50">÷</button>
+        <button id = "btnadd" class = "grid row-start-4 row-end-6 col-start-4 col-end-5 row-span-2 bg-amber-50">+</button>
+        <button id = "btnsubtract" class = "grid row-start-4 row-end-5 col-start-5 col-end-6 bg-amber-50">-</button>
+        <button id = "btnequals" class = "grid row-start-5 row-end-6 col-start-5 col-end-6 bg-amber-50">=</button>
+      </div>
+    </div>
+  <script src = "tail.js"></script>
+  </body>
+</html>
